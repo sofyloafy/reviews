@@ -15,4 +15,8 @@ describe Report do
   it "should it return Red: 1" do
     expect(report.view("Red")).to eq("Red: 1")
   end
+
+  it "should it return an array" do
+    expect(report.split("Red, Green, Amber, Green, Red")).to eq(["Red", "Green", "Amber", "Green", "Red"])
+  end
 end 
